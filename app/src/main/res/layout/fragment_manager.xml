@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_42dp"
+        android:gravity="center"
+        android:text="微管理"
+        android:textStyle="bold"
+        android:textSize="@dimen/large"
+        android:textColor="@color/color_343434"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dimen_8dp"
+        android:layout_marginRight="@dimen/dimen_8dp"
+        android:layout_height="@dimen/dimen_116dp"
+        android:background="@mipmap/manage_banner_img"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/target_layout"
+            style="@style/datawindow_linearlayout_style">
+            <ImageView
+                android:layout_width="@dimen/dimen_44dp"
+                android:layout_height="@dimen/dimen_44dp"
+                android:src="@mipmap/manage_taget_ic"/>
+            <TextView
+                style="@style/datawindow_textview_style"
+                android:text="店目标测算"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/profit_layout"
+            style="@style/datawindow_linearlayout_style">
+            <ImageView
+                android:layout_width="@dimen/dimen_44dp"
+                android:layout_height="@dimen/dimen_44dp"
+                android:src="@mipmap/manage_profit_ic"/>
+            <TextView
+                style="@style/datawindow_textview_style"
+                android:text="店利润测算"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/psm_layout"
+            style="@style/datawindow_linearlayout_style">
+            <ImageView
+                android:layout_width="@dimen/dimen_44dp"
+                android:layout_height="@dimen/dimen_44dp"
+                android:src="@mipmap/manage_senior_ic"/>
+            <TextView
+                style="@style/datawindow_textview_style"
+                android:text="PSM薪酬"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/datawindow_linearlayout_style"/>
+    </LinearLayout>
+
+</LinearLayout>

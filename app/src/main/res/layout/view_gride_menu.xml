@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:orientation="vertical"
+    android:gravity="center">
+<!--    <LinearLayout
+        android:layout_width="@dimen/dimen_41dp"
+        android:layout_height="@dimen/dimen_41dp"
+        android:gravity="center"
+        android:background="@drawable/bg_gride_circle">
+        <com.dhunter.common.view.ExpandImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="@dimen/dimen_23dp"
+            android:layout_height="@dimen/dimen_23dp"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>-->
+    <com.dhunter.common.view.ExpandImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="@dimen/dimen_64dp"
+        android:layout_height="@dimen/dimen_64dp"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:textSize="@dimen/small"
+        android:id="@+id/tv_menu"
+        android:layout_marginTop="@dimen/dimen_13dp"
+        android:textColor="@color/color_686868"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dimen_70dp"
+        android:gravity="center"/>
+</LinearLayout>

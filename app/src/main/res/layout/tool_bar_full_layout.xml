@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_50dp"
+    app:contentInsetStart="@dimen/dimen_0dp"
+    android:background="@color/color_1fbbb9">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/left_back"
+            android:layout_width="@dimen/dimen_56dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:clickable="true">
+
+            <ImageView
+                style="@style/view_click_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/selector_back"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TitleFragmentTitleText"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Title"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/next"
+            android:layout_width="@dimen/dimen_72dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/right_text"
+                style="@style/view_click_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                android:duplicateParentState="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal"/>
+            <ImageView
+                android:id="@+id/right_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dimen_16dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

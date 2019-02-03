@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_44dp"
+        android:layout_marginTop="@dimen/dimen_105dp"
+        android:text="@string/hello"
+        android:textSize="@dimen/large_34sp"
+        android:textColor="@color/color_343434"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_44dp"
+        android:layout_marginTop="@dimen/dimen_4dp"
+        android:text="@string/welcome_use"
+        android:textSize="@dimen/large_23sp"
+        android:textColor="@color/color_343434"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_44dp"
+        android:layout_marginTop="@dimen/dimen_18dp"
+        android:text="@string/user_agreement"
+        android:textSize="@dimen/small"
+        android:textColor="@color/color_686868"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimen_100dp"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp">
+        <com.tupperware.mgt.view.GridMenu
+            android:id="@+id/psw_login"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </com.tupperware.mgt.view.GridMenu>
+        <com.tupperware.mgt.view.GridMenu
+            android:id="@+id/smsCode_login"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+        </com.tupperware.mgt.view.GridMenu>
+        <com.tupperware.mgt.view.GridMenu
+            android:id="@+id/weChat_login"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </com.tupperware.mgt.view.GridMenu>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_weight="1"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@mipmap/login_logo_img"/>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tupperware.mgt">
+
+    <!-- 微信登录 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppUIBaseTheme">
+        <activity
+            android:name=".ui.main.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginFullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.activities.LoginSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginFullScreen" />
+        <activity
+            android:name=".ui.login.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginFullScreen" />
+        <activity
+            android:name=".ui.login.activities.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginFullScreen" />
+        <activity
+            android:name=".ui.login.activities.ForgetPswActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.login.activities.SmsCodeLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginFullScreen" />
+        <activity
+            android:name=".ui.login.activities.WechatBindTelActivity"
+            android:theme="@style/LoginFullScreen"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.login.activities.WechatAuthActivity"
+            android:theme="@style/TranslucentTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.datawindow.activity.KpiTargetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.me.activity.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.me.activity.ChangePswActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.datawindow.activity.LandscapeKpiTargetActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+    </application>
+
+</manifest>

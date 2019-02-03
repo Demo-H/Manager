@@ -1,0 +1,137 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.tupperware.mgt"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("./key/tupperwarestore.jks")
+            storePassword "tupperware"
+            keyAlias "huishengyi"
+            keyPassword "tupperware"
+        }
+        debug {
+            storeFile file("./key/tupperwarestore.jks")
+            storePassword "tupperware"
+            keyAlias "huishengyi"
+            keyPassword "tupperware"
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "LOG_SHOW_HIGH_PRIORITY", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable false
+        }
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "LOG_SHOW_HIGH_PRIORITY", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (variant.buildType.name.equals('release')) {
+                //生成apk名字的格式：Hui_V1.0.0.0824_office.apk
+                //可自定义自己想要生成的格式
+//                def fileName = "Hui_V${defaultConfig.versionName}_${variant.productFlavors[0].name}_${releaseTime()}.apk"
+                def fileName
+                if (project.hasProperty('VERSION_NAME_PARA')) {
+                    if (model_env().equals("true")) {
+                        fileName = "Manager_V${VERSION_NAME_PARA}_test_${releaseTime()}.apk"
+                    } else {
+                        fileName = "Manager_V${VERSION_NAME_PARA}_office_${releaseTime()}.apk"
+                    }
+                } else {
+                    if (model_env().equals("true")) {
+                        fileName = "Manager_V${defaultConfig.versionName}_test_${releaseTime()}.apk"
+                    } else {
+                        fileName = "Manager_V${defaultConfig.versionName}_office_${releaseTime()}.apk"
+                    }
+                }
+
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+
+    //解决部分第三方库重复打包MEAT_INF的问题
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+def model_env() {
+    if (project.hasProperty('MODEL_ENV_TEST')) {
+        return project.getProperties().get('MODEL_ENV_TEST')
+    } else {
+        return "true"
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile project(':common')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    compile 'com.google.dagger:dagger:2.9'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
+    //rxJava
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.6'
+    compile 'com.github.VictorAlbertos.RxCache:runtime:1.8.1-2.x'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+    compile project(path: ':locktableview')
+
+}

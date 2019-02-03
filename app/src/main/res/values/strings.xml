@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">慧管理</string>
+
+    <!-- common -->
+    <string name="next">下一步</string>
+    <string name="get_permission">获取app需要权限</string>
+    <string name="app_name_logo">特百惠·慧管理</string>
+    <string name="sure">确认</string>
+
+    <!-- Login -->
+    <string name="hello">Hello!</string>
+    <string name="welcome_use">欢迎使用特百惠·慧管理</string>
+    <string name="user_agreement">登录即同意《用户条款与隐私协议》</string>
+    <string name="input_user_account">请输入员工工号</string>
+    <string name="input_password">请输入密码</string>
+    <string name="not_input_user_account">员工工号未填写</string>
+    <string name="not_input_password">密码未填写</string>
+    <string name="login">登录</string>
+    <string name="psw_login">密码登录</string>
+    <string name="sms_code_login">验证码登录</string>
+    <string name="wechat_login">微信登录</string>
+    <string name="forget_psw">忘记密码</string>
+    <string name="other_login">其他登录方式</string>
+    <string name="input_tel_num">请输入手机号码</string>
+    <string name="input_sms_code">请输入验证码</string>
+    <string name="not_input_phone_number">手机号码未填写</string>
+    <string name="not_match_phone_number">请输入正确的手机号码</string>
+    <string name="not_exit_your_account">您输入的工号不存在</string>
+    <string name="please_set_your_psw">请设置您的密码</string>
+    <string name="please_set_your_psw_again">请确认您的密码</string>
+    <string name="start_use">开始使用</string>
+    <string name="get_sms_code">获取验证码</string>
+    <string name="psw_put_different">两次密码输入不同</string>
+    <string name="not_input_sms_code">短信验证码未填写</string>
+    <string name="psw_should_set_six_length">密码至少设置为6位</string>
+
+    <string name="data_quarter_tip">季度完成</string>
+    <string name="data_month_tip">本月完成</string>
+
+
+</resources>

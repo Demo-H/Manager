@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_login_personal_info" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_44dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp">
+        <EditText
+            android:id="@+id/user_tel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_38dp"
+            android:background="@drawable/bg_login_edit_text"
+            android:textColor="@color/color_1fbbb9"
+            android:textSize="@dimen/normal_s"
+            android:hint="@string/input_tel_num"
+            android:textColorHint="@color/color_c6d4d4"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dimen_10dp"/>
+
+        <ImageView
+            android:id="@+id/user_tel_clear"
+            android:layout_width="@dimen/dimen_15dp"
+            android:layout_height="@dimen/dimen_15dp"
+            android:background="@mipmap/login_delete_btn"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_12dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/sms_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_38dp"
+                android:background="@drawable/bg_login_edit_text"
+                android:textColor="@color/color_1fbbb9"
+                android:textSize="@dimen/normal_s"
+                android:hint="@string/input_sms_code"
+                android:textColorHint="@color/color_c6d4d4"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/dimen_10dp"
+                />
+            <ImageView
+                android:id="@+id/sms_code_clear"
+                android:layout_width="@dimen/dimen_15dp"
+                android:layout_height="@dimen/dimen_15dp"
+                android:background="@mipmap/login_delete_btn"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_12dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/get_code_btn"
+            android:layout_height="@dimen/dimen_38dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@drawable/selector_yellow_btn_text"
+            android:background="@color/no_color"
+            android:textSize="@dimen/small"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="@string/get_sms_code"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_38dp"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp"
+        android:background="@drawable/bg_login_button"
+        android:textColor="@color/white"
+        android:text="@string/login"
+        android:textSize="@dimen/normal_s"
+        android:gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp">
+        <TextView
+            android:id="@+id/other_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other_login"
+            android:textColor="@color/color_1fbbb9"
+            android:textSize="@dimen/small"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_weight="1"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@mipmap/login_logo_img"/>
+
+</LinearLayout>

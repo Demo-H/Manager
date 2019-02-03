@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextBlack">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextBlack.Normal" parent="TextBlack">
+        <item name="android:textSize">@dimen/normal</item>
+    </style>
+
+
+    <style name="StateViewConfig">
+        <item name="loadingText">@string/brvah_loading</item>
+        <item name="emptyImage">@mipmap/img_empty_data</item>
+        <item name="emptyText">@string/no_data</item>
+        <item name="disConnectImage">@mipmap/img_content_ic</item>
+        <item name="disConnectText">@string/error_and_try_click</item>
+        <item name="tipTextSize">@dimen/normal</item>
+        <item name="tipTextColor">#8a000000</item>
+    </style>
+
+    <style name="EasyPermissions" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/color_ff212121</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/color_ff80cbc4</item>
+    </style>
+
+    <style name="EasyPermissions.Transparent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--5.0以下无水波纹效果-->
+    <style name="view_click_bg">
+    </style>
+
+</resources>

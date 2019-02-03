@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/view_login_personal_info" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_44dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp">
+        <EditText
+            android:id="@+id/new_psw"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_38dp"
+            android:background="@drawable/bg_login_edit_text"
+            android:textColor="@color/color_1fbbb9"
+            android:textSize="@dimen/normal_s"
+            android:hint="@string/please_set_your_psw"
+            android:textColorHint="@color/color_c6d4d4"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dimen_10dp"/>
+
+        <ImageView
+            android:id="@+id/new_psw_check"
+            android:layout_width="@dimen/dimen_6dp"
+            android:layout_height="@dimen/dimen_6dp"
+            android:background="@drawable/selector_login_reset_psw_check_point"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_12dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_14dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp">
+        <EditText
+            android:id="@+id/new_psw_again"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_38dp"
+            android:background="@drawable/bg_login_edit_text"
+            android:textColor="@color/color_1fbbb9"
+            android:textSize="@dimen/normal_s"
+            android:hint="@string/please_set_your_psw_again"
+            android:textColorHint="@color/color_c6d4d4"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dimen_10dp"/>
+
+        <ImageView
+            android:id="@+id/new_psw_again_check"
+            android:layout_width="@dimen/dimen_6dp"
+            android:layout_height="@dimen/dimen_6dp"
+            android:background="@drawable/selector_login_reset_psw_check_point"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_12dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_use"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_38dp"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:layout_marginLeft="@dimen/dimen_60dp"
+        android:layout_marginRight="@dimen/dimen_60dp"
+        android:background="@drawable/bg_login_button"
+        android:textColor="@color/white"
+        android:text="@string/start_use"
+        android:textSize="@dimen/normal_s"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_weight="1"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@mipmap/login_logo_img"/>
+
+</LinearLayout>

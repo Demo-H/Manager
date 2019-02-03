@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_05dp"
+        android:background="@color/color_e5e5e5" />
+
+    <com.dhunter.common.tablayout.CommonTabLayout
+        android:id="@+id/main_tl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_54dp"
+        android:background="@color/white"
+        tl:tl_iconHeight="@dimen/dimen_23dp"
+        tl:tl_iconWidth="@dimen/dimen_23dp"
+        tl:tl_indicator_color="@color/color_ff7000"
+        tl:tl_indicator_height="0dp"
+        tl:tl_textSelectColor="@color/color_1fbbb9"
+        tl:tl_textUnselectColor="@color/color_b5c3c3"
+        tl:tl_textsize="@dimen/small_xx"
+        tl:tl_underline_color="@color/color_7f8389"
+        tl:tl_underline_height="@dimen/dimen_1dp"/>
+</LinearLayout>

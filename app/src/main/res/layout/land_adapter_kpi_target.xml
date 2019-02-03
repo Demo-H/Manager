@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style"
+        android:layout_marginTop="@dimen/dimen_10dp">
+
+        <ImageView
+            android:id="@+id/tag_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="销售净额(单位:千)"
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView"
+            android:layout_below="@id/tag_img"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style">
+
+        <ImageView
+            android:id="@+id/tag_img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img1"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="实际零售额(单位:千)"
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView1"
+            android:layout_below="@id/tag_img1"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style">
+
+        <ImageView
+            android:id="@+id/tag_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img2"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="OIO数量："
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView2"
+            android:layout_below="@id/tag_img2"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style">
+
+        <ImageView
+            android:id="@+id/tag_img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img3"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="新开店："
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView3"
+            android:layout_below="@id/tag_img3"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style">
+
+        <ImageView
+            android:id="@+id/tag_img4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img4"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="关店："
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView4"
+            android:layout_below="@id/tag_img4"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style">
+
+        <ImageView
+            android:id="@+id/tag_img5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img5"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="分销商数："
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView5"
+            android:layout_below="@id/tag_img5"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style">
+
+        <ImageView
+            android:id="@+id/tag_img6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img6"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="新招VIP会员数："
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView6"
+            android:layout_below="@id/tag_img6"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/kpi_layout_item_style"
+        android:layout_marginBottom="@dimen/dimen_20dp">
+
+        <ImageView
+            android:id="@+id/tag_img7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/data_tag_ic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tag_img7"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:text="单产（元）"
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_343434"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contentView7"
+            android:layout_below="@id/tag_img7"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

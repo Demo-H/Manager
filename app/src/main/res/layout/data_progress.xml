@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_20dp">
+
+            <TextView
+            android:id="@+id/quarter_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/data_quarter_tip"
+            android:textColor="#c8eeed"
+            android:textSize="@dimen/small"/>
+
+            <TextView
+                android:id="@+id/quarter_percent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_14dp"
+                android:textColor="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_data_percent"
+                android:paddingTop="@dimen/dimen_2dp"
+                android:paddingLeft="@dimen/dimen_7dp"
+                android:paddingBottom="@dimen/dimen_2dp"
+                android:paddingRight="@dimen/dimen_7dp"
+                android:textSize="@dimen/small_xx"/>
+
+            <TextView
+                android:id="@+id/quarter_current_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_below="@id/quarter_tip_tv"
+                android:typeface="normal"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/large_21sp"/>
+
+            <TextView
+                android:id="@+id/quarter_plan_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_below="@id/quarter_current_tv"
+                android:textColor="#c8eeed"
+                android:textSize="@dimen/small"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_80d4d2"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/dimen_20dp">
+
+        <TextView
+            android:id="@+id/month_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/data_month_tip"
+            android:textColor="#c8eeed"
+            android:textSize="@dimen/small"/>
+
+        <TextView
+            android:id="@+id/month_percent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_14dp"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_data_percent"
+            android:paddingTop="@dimen/dimen_2dp"
+            android:paddingLeft="@dimen/dimen_7dp"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:paddingRight="@dimen/dimen_7dp"
+            android:textSize="@dimen/small_xx"/>
+
+        <TextView
+            android:id="@+id/month_current_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/month_tip_tv"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/large_21sp"/>
+
+        <TextView
+            android:id="@+id/month_plan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_below="@id/month_current_tv"
+            android:textColor="#c8eeed"
+            android:textSize="@dimen/small"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/refresh_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:textSize="@dimen/small_xx"
+        android:textColor="#c8eeed"
+        android:drawableLeft="@mipmap/refresh_ic"
+        android:drawablePadding="@dimen/dimen_4dp"/>
+
+
+</LinearLayout>
